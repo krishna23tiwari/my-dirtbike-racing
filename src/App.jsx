@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Router, Route } from 'react-router-dom'
 import ProductsDetails from './Pages/ProductsDetails'
 import ScrollToTop from './Validation/ScrollToTop'
 import ReviewDetails from './Pages/ReviewDetails' 
+import Contact from './Pages/Contact'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
        <Route path='/products' element={<ProductsPage />} />
        <Route path='/product-details/:id' element={<ProductsDetails />} />
        <Route path='/product-review' element={<ReviewDetails />} />
+       <Route path='/product-contactus' element={<Contact />} />
 
       </Routes>
     </BrowserRouter>

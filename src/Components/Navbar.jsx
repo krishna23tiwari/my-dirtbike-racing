@@ -52,7 +52,7 @@ const Navbar = () => {
             Reviews
             <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-white group-hover:w-full transition-all duration-300"></span>
           </Link>
-          <a
+          <Link to = '/product-contactus'
             href="#calendar"
             className="nav-item text-white relative group"
             style={{ fontFamily: "Bebas Neue" }}
@@ -60,7 +60,7 @@ const Navbar = () => {
             <i className="far fa-calendar-alt mr-2" />
             Contact Us
             <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-white group-hover:w-full transition-all duration-300"></span>
-          </a>
+          </Link>
         </div>
       </div>
 
