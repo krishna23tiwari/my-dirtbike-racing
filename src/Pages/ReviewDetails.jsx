@@ -2,13 +2,14 @@ import React from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import Reviews from '../Components/Reviews'
+import reviews from '../utility/reviewdata'
 
 
 const ReviewDetails = () => {
   return (
    <div>
         <Navbar />
-        <Reviews />
+        <Reviews reviews = {reviews} />
         <Footer />
    </div>
   )
