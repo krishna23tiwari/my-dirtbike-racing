@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
+import ContactUS from './Contactus';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,25 +17,38 @@ const Navbar = () => {
           className=" text-2xl font-semibold text-white"
           style={{ fontFamily: "Bebas Neue" }}
         >
-          
-          <Link to = '/'> DirtRush</Link>
+          <Link to="/"> DirtRush</Link>
         </div>
 
         <button className="md:hidden text-white" onClick={toggleMenu}>
           <i className="fas fa-bars text-white" />
         </button>
 
-        <div className={`md:flex space-x-6 ${isOpen ? "block" : "hidden"}`}>
-          <Link to = '/'
+        <div className="flex md:hidden text-white">
+          <button onClick={toggleMenu} className="text-white">
+            <RxHamburgerMenu />
+          </button>
+
+          <div className={`absolute top-10 right-0 w-[30vw] h-[100vh] ${ isOpen ? 'flex' : 'hidden'} bg-gray-800 flex flex-col items-center justify-center`}>
+            <div>Home</div>
+            <div>Products</div>
+            <div>Reviews</div>
+            <div>Contact Us</div>
+          </div>
+        </div>
+
+        <div className="md:flex space-x-6 hidden">
+          <Link
+            to="/"
             href="#dashboard"
             className="nav-item text-white relative group"
             style={{ fontFamily: "Bebas Neue" }}
           >
-            <i className="fas fa-tachometer-alt mr-2" />
             Home
             <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-white group-hover:w-full transition-all duration-300"></span>
           </Link>
-          <Link to = '/products'
+          <Link
+            to="/products"
             href="#address-book"
             className="nav-item text-white relative group"
             style={{ fontFamily: "Bebas Neue" }}
@@ -43,7 +57,8 @@ const Navbar = () => {
             Products
             <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-white group-hover:w-full transition-all duration-300"></span>
           </Link>
-          <Link to = '/product-review'
+          <Link
+            to="/product-review"
             href="#components"
             className="nav-item text-white relative group"
             style={{ fontFamily: "Bebas Neue" }}
@@ -52,7 +67,8 @@ const Navbar = () => {
             Reviews
             <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-white group-hover:w-full transition-all duration-300"></span>
           </Link>
-          <Link to = '/product-contactus'
+          <Link
+            to="/product-contactus"
             href="#calendar"
             className="nav-item text-white relative group"
             style={{ fontFamily: "Bebas Neue" }}
@@ -64,28 +80,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {isOpen && (
-        <div className="md:hidden bg-blue-600">
-          <a href="#dashboard" className="block text-white px-4 py-2">
-            Dashboard
-          </a>
-          <a href="#address-book" className="block text-white px-4 py-2">
-            Address Book
-          </a>
-          <a href="#components" className="block text-white px-4 py-2">
-            Components
-          </a>
-          <a href="#calendar" className="block text-white px-4 py-2">
-            Calendar
-          </a>
-          <a href="#charts" className="block text-white px-4 py-2">
-            Charts
-          </a>
-          <a href="#documents" className="block text-white px-4 py-2">
-            Documents
-          </a>
-        </div>
-      )}
+     
     </nav>
   );
 };

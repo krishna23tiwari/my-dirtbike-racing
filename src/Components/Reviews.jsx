@@ -3,7 +3,7 @@ import React from "react";
 const Reviews = ({ reviews }) => {
   return (
     <div>
-      <div className="flex justify-center mt-18 mb-2 ">
+      <div className="flex justify-center mt-18 mb-2">
         <h1
           className="text-4xl font-bold text-center text-slate-800"
           style={{ fontFamily: "Agdasima" }}

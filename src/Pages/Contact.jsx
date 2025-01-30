@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
-import ContactForm from '../Components/ContactUs'
+import Contactus from '../Components/ContactUs'
 
 const Contact = () => {
   return (
     <div>
         <Navbar />
-        <ContactForm />
+        <Contactus />
         <Footer />
       
     </div>
