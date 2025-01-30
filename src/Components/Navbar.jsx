@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
-import ContactUS from './Contactus';
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,17 +24,42 @@ const Navbar = () => {
           <i className="fas fa-bars text-white" />
         </button>
 
-        <div className="flex md:hidden text-white">
-          <button onClick={toggleMenu} className="text-white">
+        <div className="flex md:hidden mr-4 text-white ">
+          <button onClick={toggleMenu} className="text-white text-2xl hover:cursor-pointer">
             <RxHamburgerMenu />
           </button>
-
-          <div className={`absolute top-10 right-0 w-[30vw] h-[100vh] ${ isOpen ? 'flex' : 'hidden'} bg-gray-800 flex flex-col items-center justify-center`}>
-            <div>Home</div>
-            <div>Products</div>
-            <div>Reviews</div>
-            <div>Contact Us</div>
-          </div>
+          {isOpen && (
+            <div className="absolute top-16 hover:cursor-auto right-1 w-44 h-50 rounded-b-xl translate-y-px bg-gray- flex flex-col items-center justify-center space-y-6">
+              <Link
+                to="/"
+                className="text-white text-xl"
+                onClick={toggleMenu} 
+              >
+                Home
+              </Link>
+              <Link
+                to="/products"
+                className="text-white text-xl"
+                onClick={toggleMenu}
+              >
+                Products
+              </Link>
+              <Link
+                to="/product-review"
+                className="text-white text-xl"
+                onClick={toggleMenu}
+              >
+                Reviews
+              </Link>
+              <Link
+                to="/product-contactus"
+                className="text-white text-xl"
+                onClick={toggleMenu}
+              >
+                Contact Us
+              </Link>
+            </div>
+          )}
         </div>
 
         <div className="md:flex space-x-6 hidden">
@@ -79,8 +104,6 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-
-     
     </nav>
   );
 };

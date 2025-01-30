@@ -21,7 +21,7 @@ const Hero = () => {
 
         <div className="w-1/2 h-full flex flex-col justify-center p-12 bg-gray-800 text-white rounded-2xl shadow-lg">
           <h1
-            className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text"
+            className="text-5xl font-extrabold sm:mt-18 mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text md:text-6xl"
             style={{ fontFamily: "Bebas Neue" }}
           >
             Ride Wild. Conquer Every Terrain

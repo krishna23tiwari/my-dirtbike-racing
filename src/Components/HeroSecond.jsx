@@ -42,7 +42,11 @@ const HeroSecond = ({ items }) => {
               
                 <Link to = {`/product-details/${item.id} `}
                 
-                  className="bg-gradient-to-r text-center from-orange-300 via-yellow-300 to-pink-300 p-1 rounded-xl w-28 cursor-pointer opacity-0 group-hover:opacity-100 hover:bg-green-200 hover:text-black hover:scale-110 duration-300"
+                  className="min-w-32 rounded-md bg-slate-800 py-2 px-4 border 
+                border-transparent text-center text-sm text-white transition-all 
+                shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none
+                 active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none 
+                 disabled:opacity-50 disabled:shadow-none"
                   onClick={addProduct}
                 >
                   Book Now
