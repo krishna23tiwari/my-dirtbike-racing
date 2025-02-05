@@ -5,10 +5,10 @@ import { MdWatchLater } from "react-icons/md";
 
 const ContactUS = () => {
   return (
-    <div className="relative">
+    <div className="w-[100vw] h-[100vh] relative">
       <div className="flex justify-center mt-16">
         <img
-          className="w-full h-full object-cover"
+          className="w-[100vw] h-[100vh] object-cover"
           src="https://images.unsplash.com/photo-1688912376248-7c192a75c060?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Background Image"
         />
@@ -76,14 +76,14 @@ const ContactUS = () => {
             <input
               type="text"
               placeholder="First Name"
-              className="pl-4 py-2 text-xl w-1/2 rounded-md placeholder-black focus:placeholder-white focus:outline-none text-white"
+              className="pl-4 py-2 text-xl border border-gray-400 w-1/2 rounded-md placeholder-gray-300 focus:placeholder-white focus:outline-none text-white"
             />
 
             <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-white group-hover:w-full transition-all duration-300"></span>
             <input
               type="text"
               placeholder="Last Name"
-              className="pl-4 py-2 text-xl w-1/2 rounded-md placeholder-black focus:placeholder-white focus:outline-none text-white"
+              className="pl-4 py-2 text-xl w-1/2 rounded-md border border-gray-400 placeholder-gray-300 focus:placeholder-white focus:outline-none text-white"
             />
           </div>
 
@@ -91,7 +91,7 @@ const ContactUS = () => {
             <input
               type="email"
               placeholder="Email Address"
-              className="pl-4 py-2 text-xl w-full rounded-md placeholder-black focus:placeholder-white focus:outline-none text-white"
+              className="pl-4 py-2 text-xl w-full rounded-md border border-gray-400 placeholder-gray-300 focus:placeholder-white focus:outline-none text-white"
             />
           </div>
 
@@ -99,14 +99,14 @@ const ContactUS = () => {
             <input
               type="Contact Number"
               placeholder="Contact Number"
-              className="pl-4 py-2 text-xl w-full rounded-md placeholder-black focus:placeholder-white focus:outline-none text-white"
+              className="pl-4 py-2 text-xl w-full rounded-md border border-gray-400 placeholder-gray-300 focus:placeholder-white focus:outline-none text-white"
             />
           </div>
 
           <div className="mb-4">
             <textarea
               placeholder="Your Message"
-              className="pl-4 py-2 text-xl w-full rounded-md placeholder-black focus:placeholder-white focus:outline-none text-white mb-11"
+              className="pl-4 py-2 text-xl w-full rounded-md border border-gray-400 placeholder-gray-300 focus:placeholder-white focus:outline-none text-white mb-11"
               rows="4"
             ></textarea>
           </div>

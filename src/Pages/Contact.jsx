@@ -5,11 +5,10 @@ import ContactForm from '../Components/Contactus'
 
 const Contact = () => {
   return (
-    <div>
+    <div className=''>
         <Navbar />
         <ContactForm />
         <Footer />
-      
     </div>
   )
 }
