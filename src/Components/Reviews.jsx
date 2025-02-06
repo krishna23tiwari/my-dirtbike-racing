@@ -16,49 +16,32 @@ const Reviews = ({ reviews }) => {
         {reviews.map((review) => (
           <div
             key={review.id}
-            className="flex flex-col p-3 bg-white shadow-sm border border-slate-200 rounded-lg w-full"
+            className="flex flex-col bg-gray-300 p-6 shadow-lg border rounded-lg w-full max-w-md relative"
           >
-            <div className="m-2.5 overflow-hidden rounded-md h-80 flex justify-center items-center">
-              <img
-                className="w-full h-full object-cover"
-                src={
-                  review.image ||
-                  "https://docs.material-tailwind.com/img/team-3.jpg"
-                }
-                alt="profile-picture"
-              />
+            <div className="absolute -top-5 left-5 bg-orange-500 text-white px-3 py-1 text-sm font-bold rounded-md">
+              PRO
             </div>
-            <div className="p-6 text-center">
-              <h4
-                className="mb-1 text-xl font-semibold text-slate-800"
-                style={{ fontFamily: "monospace" }}
-              >
-                {review.userName}
-              </h4>
-              <p
-                className="text-base text-slate-600 mt-4 mb-3 font-light"
-                style={{ fontFamily: "cursive" }}
-              >
-                {review.description}
-              </p>
-              <p className="text-sm font-semibold mb-2 text-slate-500 uppercase">
-                Rating: {review.rating}
-              </p>
-              <p className="text-sm font-semibold text-slate-500 uppercase">
-                Location: {review.location}
-              </p>
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 bg-gray-700 rounded-full flex justify-center items-center">
+                <img
+                  className="w-full h-full rounded-full object-cover"
+                  src={review.image}
+                  alt="profile-picture"
+                />
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800">{review.userName}</h4>
+                <p className="text-sm text-gray-600">{review.designation}</p>
+              </div>
             </div>
-            <div className="flex justify-center p-6 pt-2 gap-7">
-              <button
-                className="min-w-32 rounded-md bg-slate-800 py-2 px-4 border 
-                border-transparent text-center text-sm text-white transition-all 
-                shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none
-                 active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none 
-                 disabled:opacity-50 disabled:shadow-amber-200"
-                type="button"
-              >
-                Follow
-              </button>
+            <p className="text-gray-700 mt-4">{review.description}</p>
+            <div className="flex items-center mt-3">
+              <p className="text-yellow-500 text-lg font-bold">{"★".repeat(review.rating)}</p>
+              <p className="ml-2 text-gray-600 text-sm">({review.rating}/5)</p>
+            </div>
+            <p className="text-sm font-semibold text-gray-500 mt-8">Location: {review.location}</p>
+            <div className="flex justify-end mt-4">
+              
             </div>
           </div>
         ))}

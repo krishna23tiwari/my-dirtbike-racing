@@ -6,6 +6,7 @@ import ProductsDetails from './Pages/ProductsDetails'
 import ScrollToTop from './Validation/ScrollToTop'
 import ReviewDetails from './Pages/ReviewDetails' 
 import Contact from './Pages/Contact'
+import AreYouReadyP from './Pages/AreYouReadyP'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
        <Route path='/product-details/:id' element={<ProductsDetails />} />
        <Route path='/product-review' element={<ReviewDetails />} />
        <Route path='/product-contactus' element={<Contact />} />
+       <Route path='/ruready' element={<AreYouReadyP />} />
 
       </Routes>
     </BrowserRouter>

@@ -7,7 +7,7 @@ import reviews from '../utility/reviewdata'
 
 const ReviewDetails = () => {
   return (
-   <div>
+   <div className='flex flex-col items-center justify-center gap-4'>
         <Navbar />
         <Reviews reviews = {reviews} />
         <Footer />

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -31,9 +32,10 @@ const Hero = () => {
             Dominate dirt, mud, and rocky paths with power, precision, and
             unstoppable performance."
           </p>
-          <button className="mt-6 py-3 px-8 bg-gradient-to-r hover:cursor-pointer from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+          <Link to="/ruready"
+           className="mt-6 py-3 px-8 flex justify-center bg-gradient-to-r hover:cursor-pointer from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
             Are You Ready to Ride?
-          </button>
+          </Link>
         </div>
       </section>
     </div>
