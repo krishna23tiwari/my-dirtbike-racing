@@ -2,7 +2,7 @@ import React from "react";
 
 const Reviews = ({ reviews }) => {
   return (
-    <div>
+    <div className="h-full w-full bg-gray-400 p-7">
       <div className="flex justify-center mt-18 mb-2">
         <h1
           className="text-4xl font-bold text-center text-slate-800"
@@ -45,6 +45,17 @@ const Reviews = ({ reviews }) => {
             </div>
           </div>
         ))}
+      </div>
+      <div>
+        <div className="mt-12">
+          <p className="text-2xl"style={{ fontFamily: "Agdasim" }} >"At <span className="text-xl font-extralight" style={{ fontFamily: "Bebas Neue" }}>DirtRush</span>, we believe the best way to showcase 
+          our dirt bikes is through the voices of our riders. 
+          Our review section is filled with real experiences from passionate bikers 
+          who have tested our machines on rugged trails, steep hills, and open roads. 
+          Whether it's the power-packed performance, durability, or sheer thrill of the ride, 
+          our customers have a lot to say. Read their stories and see why our dirt bikes are built 
+          for adventure!"</p>
+        </div>
       </div>
     </div>
   );
