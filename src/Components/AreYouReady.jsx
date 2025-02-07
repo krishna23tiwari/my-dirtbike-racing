@@ -1,5 +1,6 @@
 import React from 'react'
 import productsdata from '../utility/Ruready'
+import { Link } from 'react-router-dom'
 
 
 const AreYouReady = () => {
@@ -28,9 +29,11 @@ const AreYouReady = () => {
           <h2 className="text-xl font-bold mt-4 text-gray-800">{product.name}</h2>
           <p className="text-gray-600 mt-2">{product.description}</p>
           <p className="text-lg font-semibold text-gray-900 mt-2">{product.price}</p>
-          <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+          <Link to = '/buynow' 
+            className="mt-6 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 flex gap-6 justify-center"
+            >
             Buy Now
-          </button>
+          </Link>
         </div>
       ))}
     </div>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ProductInfo = ({ items }) => {
   const { id } = useParams();
@@ -100,7 +101,7 @@ const ProductInfo = ({ items }) => {
           <span className="text-2xl font-semibold px-4">{counter}</span>
 
           <button
-            className="bg-green-400 text-white text-xl w-10 h-10 flex items-center justify-center rounded-full hover:bg-green-700 hover:cursor-pointer transform transition duration-300"
+            className="bg-green-400 text-white text-xl w-10 h-10 flex items-center justify-center rounded-full hover:bg-green-00 hover:cursor-pointer transform transition duration-300"
             onClick={addProduct}
           >
             +<i className="fas fa-minus"></i>
@@ -110,10 +111,10 @@ const ProductInfo = ({ items }) => {
             ₹{totalPrice}
           </p>
 
-          <button className="bg-gradient-to-r from-teal-500 via-cyan-400 to-blue-500 py-3 px-6 rounded-full text-white font-semibold hover:scale-105 transform transition duration-300 flex justify-center items-center space-x-2">
+          <Link to = '/buynow' className="bg-gradient-to-r from-teal-500 via-cyan-400 to-blue-500 py-3 px-6 rounded-full text-white font-semibold hover:scale-105 transform transition duration-300 flex justify-center items-center space-x-2">
             <span>Buy Now</span>
             <i className="fas fa-shopping-cart"></i>
-          </button>
+          </Link>
         </div>
       </div>
     </div>

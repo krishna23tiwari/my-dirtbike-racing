@@ -7,6 +7,7 @@ import ScrollToTop from './Validation/ScrollToTop'
 import ReviewDetails from './Pages/ReviewDetails' 
 import Contact from './Pages/Contact'
 import AreYouReadyP from './Pages/AreYouReadyP'
+import BuyNowProducts from './Pages/BuyNowProducts'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
        <Route path='/product-review' element={<ReviewDetails />} />
        <Route path='/product-contactus' element={<Contact />} />
        <Route path='/ruready' element={<AreYouReadyP />} />
+       <Route path='/buynow' element={<BuyNowProducts />} />
 
       </Routes>
     </BrowserRouter>
