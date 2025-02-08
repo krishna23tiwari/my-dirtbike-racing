@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   useEffect(() => {
@@ -37,40 +38,40 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2">
               <li>
-                <a
+                <Link to = "/"
                   href="#home"
                   className="hover:text-gray-400"
                   style={{ fontFamily: "Bebas Neue" }}
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link to = "/products"
                   href="#services"
                   className="hover:text-gray-400"
                   style={{ fontFamily: "Bebas Neue" }}
                 >
-                  Reviews
-                </a>
+                  Products
+                </Link>
               </li>
               <li>
-                <a
+                <Link to = "/product-review"
                   href="#about"
                   className="hover:text-gray-400"
                   style={{ fontFamily: "Bebas Neue" }}
                 >
-                  About
-                </a>
+                  Reviews
+                </Link>
               </li>
               <li>
-                <a
+                <Link to = "/product-contactus"
                   href="#contact"
                   className="hover:text-gray-400"
                   style={{ fontFamily: "Bebas Neue" }}
                 >
-                  Contact
-                </a>
+                  ContactUs
+                </Link>
               </li>
             </ul>
           </div>
@@ -101,12 +102,12 @@ const Footer = () => {
               >
                 <FaTwitter size={24} />
               </a>
-              <a
+              <Link to = '/socialmedia'
                 href="https://linkedin.com"
                 className="text-gray-400 hover:text-blue-700 transition-colors"
               >
                 <FaLinkedin size={24} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

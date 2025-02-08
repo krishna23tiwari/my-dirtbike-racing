@@ -8,6 +8,7 @@ import ReviewDetails from './Pages/ReviewDetails'
 import Contact from './Pages/Contact'
 import AreYouReadyP from './Pages/AreYouReadyP'
 import BuyNowProducts from './Pages/BuyNowProducts'
+import SocialMediaFile from './Pages/SocialMediaFile'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
        <Route path='/product-contactus' element={<Contact />} />
        <Route path='/ruready' element={<AreYouReadyP />} />
        <Route path='/buynow' element={<BuyNowProducts />} />
+       <Route path='/socialmedia' element={<SocialMediaFile/>} />
 
       </Routes>
     </BrowserRouter>

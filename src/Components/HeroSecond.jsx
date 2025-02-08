@@ -5,25 +5,7 @@ const HeroSecond = ({ items }) => {
   return (
     <>
       {items.map((item,index) => {
-        const [counter, setCounter] = useState(0);
-
-        const addProduct = () => {
-          if (counter < 10) {
-            setCounter((a) => a + 1);
-          } else {
-            alert("You can not add more than 10 items");
-          }
-        };
-
-        const removeProduct = () => {
-          if (counter > 0) {
-            setCounter((a) => a - 1);
-          } else {
-            alert("You can not remove item as you have not added it yet");
-          }
-        };
-
-        const totalPrice = (counter * item.price).toFixed(2);
+      
 
         return (
           <div className="flex w-full mt-14 p-5 mb-2 hover:bg-gray-600 duration-500 rounded-2xl shadow-red-600 group" key={item.id}>
@@ -47,7 +29,7 @@ const HeroSecond = ({ items }) => {
                 shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none
                  active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none 
                  disabled:opacity-50 disabled:shadow-none"
-                  onClick={addProduct}
+                 
                 >
                   Book Now
                 </Link>
