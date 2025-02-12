@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ProductInfo = ({ items }) => {
   const { id } = useParams();
@@ -38,6 +39,8 @@ const ProductInfo = ({ items }) => {
   };
 
   const totalPrice = (counter * product.price).toFixed(2);
+
+  const navigate = useNavigate();
 
   return (
     <div className="flex w-full p-6 mt-20 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
@@ -111,7 +114,9 @@ const ProductInfo = ({ items }) => {
             ₹{totalPrice}
           </p>
 
-          <Link to = '/buynow' className="bg-gradient-to-r from-teal-500 via-cyan-400 to-blue-500 py-3 px-6 rounded-full text-white font-semibold hover:scale-105 transform transition duration-300 flex justify-center items-center space-x-2">
+          <Link to = '/buynow' 
+          state={{product}}
+          className="bg-gradient-to-r from-teal-500 via-cyan-400 to-blue-500 py-3 px-6 rounded-full text-white font-semibold hover:scale-105 transform transition duration-300 flex justify-center items-center space-x-2">
             <span>Buy Now</span>
             <i className="fas fa-shopping-cart"></i>
           </Link>

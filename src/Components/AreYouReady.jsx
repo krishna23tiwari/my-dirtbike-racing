@@ -1,9 +1,13 @@
 import React from 'react'
 import productsdata from '../utility/Ruready'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 const AreYouReady = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="h-full w-full bg-gray-200 p-8 mt-14">
     {/* Introductory Section */}
@@ -30,6 +34,7 @@ const AreYouReady = () => {
           <p className="text-gray-600 mt-2">{product.description}</p>
           <p className="text-lg font-semibold text-gray-900 mt-2">{product.price}</p>
           <Link to = '/buynow' 
+          state={{product}}
             className="mt-6 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 flex gap-6 justify-center"
             >
             Buy Now
